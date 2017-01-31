@@ -14,3 +14,30 @@
  *= require font-awesome
  *= require_self
  */
+.simple_form {
+   max-width: 330px;
+   padding: 15px;
+   margin: 0 auto;
+ }
+.simple_form .form-signin-heading,
+.simple_form .checkbox {
+   margin-bottom: 10px;
+ }
+.simple_form .checkbox {
+   font-weight: normal;
+ }
+.simple_form .form-control {
+   position: relative;
+   height: auto;
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+   padding: 10px;
+   font-size: 16px;
+ }
+.simple_form .form-control:focus {
+   z-index: 2;
+ }
+.simple_form input {
+   margin-bottom: 10px;
+ }
