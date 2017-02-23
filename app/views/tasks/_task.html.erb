@@ -24,13 +24,13 @@
   <div class="panel-footer text-center">
     <% if task.state == "doing" %>
       <div class="btn-group btn-group-justified" role="group">
-        <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, change_task_path(task, state: "to_do"), method: :put, class: "btn btn-warning btn-md btn-block" %>
-        <%= link_to '<i class="fa fa-arrow-right"></i>'.html_safe, change_task_path(task, state: "done"), method: :put, class: "btn btn-success btn-md btn-block" %>
+        <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, change_task_path(task, state: "to_do"), method: :put, class: "btn btn-warning btn-md btn-block", data: { toggle: 'tooltip', placement: 'bottom', original_title: 'Move to To Do' } %>
+        <%= link_to '<i class="fa fa-arrow-right"></i>'.html_safe, change_task_path(task, state: "done"), method: :put, class: "btn btn-success btn-md btn-block", data: { toggle: 'tooltip', placement: 'bottom', original_title: 'Move to Done' } %>
       </div>
     <% elsif task.state == "done" %>
-      <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, change_task_path(task, state: "doing"), method: :put, class: "btn btn-info btn-md btn-block" %>
+      <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, change_task_path(task, state: "doing"), method: :put, class: "btn btn-info btn-md btn-block", data: { toggle: 'tooltip', placement: 'bottom', original_title: 'Move to Doing'} %>
     <% else %>
-    <%= link_to '<i class="fa fa-arrow-right"></i>'.html_safe, change_task_path(task, state: "doing"), method: :put, class: "btn btn-info btn-md btn-block" %>
+    <%= link_to '<i class="fa fa-arrow-right"></i>'.html_safe, change_task_path(task, state: "doing"), method: :put, class: "btn btn-info btn-md btn-block", data: { toggle: 'tooltip', placement: 'bottom', original_title: "Move to Doing" }  %>
     <% end %>
   </div>
 </div>

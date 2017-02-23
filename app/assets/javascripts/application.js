@@ -15,3 +15,7 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip({container: 'body'});
+});
